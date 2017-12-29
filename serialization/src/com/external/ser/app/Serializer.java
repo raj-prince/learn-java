@@ -1,7 +1,9 @@
-package com.external.prince;
+package com.external.ser.app;
+
+import com.external.ser.obj.Animal;
+import com.external.ser.obj.Person;
 
 import java.io.FileOutputStream;
-import java.io.ObjectOutput;
 import java.io.ObjectOutputStream;
 
 public class Serializer {

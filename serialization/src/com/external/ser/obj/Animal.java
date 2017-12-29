@@ -1,51 +1,44 @@
-package com.external.prince;
-
+package com.external.ser.obj;
 
 import java.io.Serializable;
 
-public class Person implements Serializable {
+public class Animal implements Serializable {
 
-    // Stores the name of the person.
+    // Stores name of the animal.
     String name;
 
-    // Stores the age of the person.
+    // Stores age of the animal.
     int age;
 
-    // Person's pet animal.
-    Animal pet;
-
-    public Person(String name, int age, Animal pet) {
+    public Animal(String name, int age) {
         this.name = name;
         this.age = age;
-        this.pet = pet;
     }
+
 
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
 
-        Person person = (Person) o;
+        Animal animal = (Animal) o;
 
-        if (age != person.age) return false;
-        if (name != null ? !name.equals(person.name) : person.name != null) return false;
-        return pet != null ? pet.equals(person.pet) : person.pet == null;
+        if (age != animal.age) return false;
+        return name != null ? name.equals(animal.name) : animal.name == null;
     }
 
     @Override
     public int hashCode() {
         int result = name != null ? name.hashCode() : 0;
         result = 31 * result + age;
-        result = 31 * result + (pet != null ? pet.hashCode() : 0);
         return result;
     }
 
     @Override
     public String toString() {
-        return "Person{" +
+        return "Animal{" +
                 "name='" + name + '\'' +
                 ", age=" + age +
-                ", pet=" + pet +
                 '}';
     }
 
@@ -63,13 +56,5 @@ public class Person implements Serializable {
 
     public void setAge(int age) {
         this.age = age;
-    }
-
-    public Animal getPet() {
-        return pet;
-    }
-
-    public void setPet(Animal pet) {
-        this.pet = pet;
     }
 }

@@ -1,4 +1,6 @@
-package com.external.prince;
+package com.external.ser.app;
+
+import com.external.ser.obj.Person;
 
 import java.io.FileInputStream;
 import java.io.ObjectInputStream;
