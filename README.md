@@ -26,3 +26,17 @@ network location (IP address) and TCP port.
 * Socket provides InputStream for reading a message and OutputStream for writing something.
 
 * Here, we only illustrated a simple demo of message passing b/w two devices using socket.
+
+# Multi-Threading
+
+* A thread is a separate 'thread of execution'. In other words a separate call stack.
+
+* main() method is also a thread called by JVM.
+
+* Just pass a runnable instance to Thread constructor to create a thread. Call start() method
+of thread to get in Runnable state of a thread. Execution of the thread is controlled by
+Thread schedular.
+
+* 'synchronized' keyword is used to make a method atomic.
+
+* Need to handle deadlock when you are working on multi-threaded application.
