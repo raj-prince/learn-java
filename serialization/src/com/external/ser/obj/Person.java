@@ -5,6 +5,9 @@ import java.io.Serializable;
 
 public class Person implements Serializable {
 
+    // Required at the time of serialization or deserialization.
+    static final long serialVersionUID = 395409196047199046L;
+
     // Stores the name of the person.
     String name;
 

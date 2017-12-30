@@ -4,6 +4,10 @@ import java.io.Serializable;
 
 public class Animal implements Serializable {
 
+    // Required at the time of serialization and deserialization.
+    // We can find it using: serialver -classpath <classpath> . <fully specified class name>
+    static final long serialVersionUID = 3444581603015690609L;
+
     // Stores name of the animal.
     String name;
 
